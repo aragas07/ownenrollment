@@ -52,8 +52,9 @@ class AuthorizeController extends Controller
                         ->where('designation_employees.employees_id', '=', $employeeData[0]['oid'])
                         ->select('designation_employees.designation_role', 'designation_employees.program_id')
                         ->get();  
-
         return response()->json($designation);
+
+        // example
     }
 
     public function index($request){
