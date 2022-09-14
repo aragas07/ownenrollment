@@ -7,7 +7,11 @@
                 <div class="col-md-12 mb-3">
                     <div class="card">
                         <div class="card-header">
+<<<<<<< HEAD
                             Enrollment Pre-registration
+=======
+                            Designation
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                         </div>
                         <div class="card-body">
                             <form action="/semesters" method="post">
@@ -34,6 +38,30 @@
                                     </div>
                                 </div>
                                 <div class="form-row mb-3">
+<<<<<<< HEAD
+=======
+                                    <div class="col">
+                                        <label for="schoolYear">Employee Name</label>
+                                        <select class="form-select form-control" aria-label="semester" id="school_year" name="school_year">
+                                            <option selected>Choose---</option>
+                                            <option value="">Lorem Ipsum</option>
+                                            <option value="">Lorem Ipsum</option>
+                                            <option value="">Lorem Ipsum</option>
+                                        </select> 
+                                    </div>
+                                    <div class="col">
+                                        <label for="semester">Designation</label>
+                                        <select class="form-select form-control" aria-label="semester" id="semester" name="semester">
+                                            <option selected>Choose---</option>
+                                            <option value="admission">Admission Staff</option>
+                                            <option value="Second Semester">Adviser</option>
+                                            <option value="Summer Semester">Program Head</option>
+                                            <option value="Late Semester">Admission Head</option>
+                                        </select>  
+                                    </div>
+                                </div>
+                                <div class="form-row mb-3">
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                                     <div class="col text-center">
                                         <button type="submit" class="btn btn-primary ">Add Employee</button>
                                     </div>

@@ -3,6 +3,10 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
+<<<<<<< HEAD
+=======
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
         <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('light-bootstrap/img/apple-icon.png') }}">
         <link rel="icon" type="image/png" href="{{ asset('light-bootstrap/img/favicon.ico') }}">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -10,7 +14,11 @@
         <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
         <!--     Fonts and icons     -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+<<<<<<< HEAD
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/\font-awesome/latest/css/font-awesome.min.css" />
+=======
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
         <!-- CSS Files -->
         <link href="{{ asset('light-bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
         <link href="{{ asset('light-bootstrap/css/light-bootstrap-dashboard.css?v=2.0.0') }} " rel="stylesheet" />
@@ -18,6 +26,39 @@
         <link href="{{ asset('light-bootstrap/css/demo.css') }}" rel="stylesheet" />
       <script src="{{asset('light-bootstrap/js/core/jquery.3.2.1.min.js')}}"></script>
       <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<<<<<<< HEAD
+=======
+      
+      <link  href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet">
+      <link  href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css" rel="stylesheet">
+
+      
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+      <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+      <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
+      <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+      <script>
+      $(document).ready(function () {
+        $.get("{{ url('getDesignation') }}", function(data){
+          console.log(data[0].designation_role);
+          if(data[0].designation_role == 'adviser'){
+            $('#nav-semesters').hide();
+            $('#nav-employees').hide();
+            $('#nav-school-id').hide();
+            $('#nav-sync').hide();
+          } if(data[0].designation_role == 'admission_staff'){
+            $('#nav-semesters').hide();
+            $('#nav-employees').hide();
+            $('#nav-sync').hide();
+          }
+        });
+      });
+      </script>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
     </head>
 
     <body>
@@ -33,6 +74,10 @@
               @yield('content')
               @include('layouts.footer.nav')
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
         </div>
     </body>
         <!--   Core JS Files   -->
@@ -124,4 +169,8 @@
         });
       });
     </script>
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
 </html>

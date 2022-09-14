@@ -7,6 +7,7 @@
         <div class="progress-step progress-step-active" data-title="Give consent"></div>
         <div class="progress-step" data-title="Identify yourself"></div>
         <div class="progress-step" data-title="Fill up Forms"></div>
+<<<<<<< HEAD
         <div class="progress-step" data-title="Upload Documents"></div>
         <div class="progress-step" data-title="Tracking number"></div>
         <!-- <div class="progress-step" data-title="Complete"></div> -->
@@ -40,6 +41,16 @@
 <div hidden class="loading-div">
     <i class="fa fa-spinner fa-spin" style="font-size:70px; color: white"></i>
 </div>
+=======
+        <div class="progress-step" data-title="Get ticket number Download/Print/Sign"></div>
+        <div class="progress-step" data-title="Upload Documents"></div>
+        <div class="progress-step" data-title="Confirm"></div>
+    </div>
+</div>
+@include('incomingstudents.extensions.consent')
+@include('incomingstudents.extensions.identify')
+@include('incomingstudents.extensions.studentform')
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
 @stack('js')
 <script>
 $(function() {
@@ -49,6 +60,7 @@ $(function() {
         }
     })
 
+<<<<<<< HEAD
     $(".forconfirm").click(function() {
         setTimeout(() => {
             $(".conf-img").attr('src', 'img/success.gif');
@@ -434,6 +446,8 @@ $(function() {
         }, 100);
     })
 
+=======
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
     $("input[name='type']").each(function(i) {
         $(this).click(function() {
             $("input[name='type']").each(function(index) {
@@ -442,17 +456,27 @@ $(function() {
             $(this).prop('checked', true);
         })
     })
+<<<<<<< HEAD
     viewForm(3,'');
+=======
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
 
     $.ajax({
         url: "{{ route('getnum') }}",
         type: 'post',
+<<<<<<< HEAD
+=======
+        data: {
+            num: ''
+        },
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
         success: function(data) {
             if (data.number != null) {
                 for (var i = 0; i < data.number; i++) {
                     showHide(i);
                 }
             }
+<<<<<<< HEAD
             if (data.type == 'new') {
                 $("#newstudform").prop('hidden', false);
                 $("#oldstud").prop('hidden', true);
@@ -470,6 +494,15 @@ $(function() {
         }
     })
     
+=======
+            if (data.type.trim() == 'new') {
+                $("#newstudform").attr('hidden', false);
+            } else if (data.type.trim() == 'old') {
+                $("#oldstud").attr('hidden', false);
+            }
+        }
+    })
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
     var forms = document.querySelectorAll('.needs-validation')
     Array.prototype.slice.call(forms)
         .forEach(function(form) {
@@ -482,6 +515,7 @@ $(function() {
                 form.classList.add('was-validated')
             }, false)
         })
+<<<<<<< HEAD
     var studproceed = false;
     $("input[name='type']").each(function(ind) {
         $(this).click(function() {
@@ -604,6 +638,72 @@ $(function() {
             }
         })
     }
+=======
+
+    let stepNum = 0,
+        b = true;
+    $(".btn-primary").each(function(index) {
+        $(this).click(function() {
+            b = true;
+            if (index == 2) {
+                sttype = 196;
+                stgctc = 147;
+                showHide(1);
+            } else if (index == 3) {
+                sttype = 297;
+                stgctc = 237;
+                showHide(1);
+                //showHide(2);
+                //showHide(3);
+                $("#course-sec").attr('hidden', true);
+            } else if (index == 5) {
+                // printgctc();
+            } else if (index == 6) {
+                // print();
+            } else {
+                if (index == 8) {}
+                showHide(index)
+            }
+            //let num = index + 1;
+            let stype = " " + $(this).val();
+            let num = 1;
+            //let stype = 0;
+            alert($("input[name='type']:checked").val());
+            $.ajax({
+                url: "stop/" + num + "/" + stype,
+                type: 'post',
+                data: {
+                    sam: 'sample'
+                },
+                success: function(data) {
+                    if (data.type.trim() == 'new') {
+                        console.log("smaple");
+                        $("#newstudform").attr('hidden', false);
+                    } else if (data.type.trim() == 'old') {
+                        $("#oldstud").attr('hidden', false);
+                    }
+                }
+            })
+        })
+    })
+
+    let num = 1,
+        stype = 0;
+    $.ajax({
+        url: "stop/" + num + "/" + stype,
+        type: 'post',
+        data: {
+            sam: 'sample'
+        },
+        success: function(data) {
+            if (data.type.trim() == 'new') {
+                $("#newstudform").attr('hidden', false);
+            } else if (data.type.trim() == 'old') {
+                $("#oldstud").attr('hidden', false);
+            }
+        }
+    })
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
 
     function showHide(index) {
         if (b) stepNum++;
@@ -643,6 +743,7 @@ $(function() {
         })
         $("#selfasses").val(asses);
         $("#bother").val(bothers);
+<<<<<<< HEAD
         if (b) {
             $.ajax({
                 url: $(this).attr("action"),
@@ -674,6 +775,34 @@ $(function() {
         }
     })
 
+=======
+        if ($("#customFile").val() == '') {
+            $("#image-invalid").style('display', 'block');
+        } else {
+            if (b) {
+                $.ajax({
+                    url: $(this).attr("action"),
+                    method: 'POST',
+                    data: new FormData(this),
+                    contentType: false,
+                    cache: false,
+                    dataType: 'json',
+                    processData: false,
+                    success: function(result) {
+                        if (result != 'error') {
+                            load();
+                            $("#ticketnum").html("TAKE NOTE, THIS IS YOUR TICKET CODE:  " +
+                                result);
+                            showHide(2);
+                            b = false;
+                            showHide(3);
+                        }
+                    }
+                })
+            }
+        }
+    })
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
 })
 </script>
 

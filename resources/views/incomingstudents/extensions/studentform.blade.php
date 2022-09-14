@@ -7,13 +7,18 @@
                         BASIC INFORMATION</h1>
                 </div>
                 <div class="card-body">
+<<<<<<< HEAD
                     <form action="" id="s-Student" method="post">
+=======
+                    <form action="" method="post">
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                         <div class="row m-0 form-group">
                             <label class="col-4 p-0">ID Number</label>
                             <p class="col-8">---------</p>
                         </div>
                         <div class="row m-0 form-group">
                             <label class="col-4 p-0">First name</label>
+<<<<<<< HEAD
                             <input type="text" name="fname" class="col-8 form-control form-control-sm">
                         </div>
                         <div class="row m-0 form-group">
@@ -23,6 +28,13 @@
                         <div class="row m-0 form-group">
                             <label class="col-4 p-0">Last name</label>
                             <input type="text" name="mname" class="col-8 form-control form-control-sm">
+=======
+                            <input type="text" class="col-8 form-control form-control-sm">
+                        </div>
+                        <div class="row m-0 form-group">
+                            <label class="col-4 p-0">Middle name</label>
+                            <input type="text" class="col-8 form-control form-control-sm">
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                         </div>
                         <div class="row m-0 form-group">
                             <label class="col-4 p-0">Date of Birth</label>
@@ -32,29 +44,50 @@
                             <label class="col-4 p-0">Phone #</label>
                             <input type="text" class="col-8 form-control form-control-sm">
                         </div>
+<<<<<<< HEAD
                         <div class="col-12">
                             <button type="button" class="btn btn-success float-left">Checked</button>
                             <button class="btn btn-primary float-right">Proceed</button>
+=======
+                        <div class="col-12 text-center">
+                            <button class="btn btn-primary col-6">Proceed</button>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                         </div>
                     </form>
                 </div>
             </div>
+<<<<<<< HEAD
             <div id="newstudform" hidden class="card shadow-lg border-0 rounded-lg mt-5">
                 <div class="card-header">
                     <h1 style="text-align: center; margin-top: 20px; margin-bottom: 20px; font-family: CENTURY GOTHIC;">STUDENT INFORMATION PROFILE</h1>
+=======
+            <div id="newstudform" class="card shadow-lg border-0 rounded-lg mt-5">
+                <div class="card-header">
+                    <h1 style="text-align: center; margin-top: 20px; margin-bottom: 20px; font-family: CENTURY GOTHIC;">
+                        PERSONAL DATA</h1>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                 </div>
                 <form id="insertstud" method="post" action="{{ route('studIn') }}" enctype="multipart/form-data" class="needs-validation" novalidator>
                     <div class="card-body row g-3">
                         <div class="col-md-4">
                             <div class="col-12">
                                 <img id="pro-image" src="img/human.png" class="col-md-12">
+<<<<<<< HEAD
                                 <button id="custom-btn" class="col-md-12 btn btn-outline-info mt-3 mb-3" type="button">CHOOSE IMAGE</button>
                             </div>
                             <input type="file" class="form-control" hidden id="customFile" name="image" accept="image/*">
+=======
+                                <button id="custom-btn" class="col-md-12 btn btn-outline-info mt-3 mb-3"
+                                    type="button">CHOOSE IMAGE</button>
+                            </div>
+                            <input type="file" class="form-control" hidden id="customFile" name="image"
+                                accept="image/*">
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                             <div id="image-invalid" class="invalid-feedback">Please provide an image</div>
                         </div>
                         <div class="col-md-8">
                             <div class="col-12 p-0">
+<<<<<<< HEAD
                                 <input type="text" name="lrn" id="lrn" class="form-control required" placeholder="Learner Reference Number (LRN)" onkeyup="NumbersOnly(this)" required>
                             </div>
                             <div class="col-12 p-0">
@@ -69,29 +102,59 @@
                             <div class="col-md-4 pl-0">
                                 <div class="invalid-feedback">Please fill all the needed information</div>
                                 <input type="text" name="suffix" id="suffix" class="form-control" placeholder="Suffix">
+=======
+                                <input type="text" name="fname" class="form-control required" placeholder="Firstname" required>
+                            </div>
+                            <div class="col-12 p-0">
+                                <input type="text" name="mname" class="form-control" placeholder="Middlename">
+                            </div>
+                            <div class="col-12 p-0">
+                                <input type="text" name="lname" class="form-control required" placeholder="Lastname" required>
+                            </div>
+                            <div class="col-md-4 pl-0">
+                                <div class="invalid-feedback">Please fill all the needed information</div>
+                                <input type="text" name="suffix" class="form-control" placeholder="Suffix">
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                             </div>
                         </div>
                         <div class="col-md-4">
                             <label class="form-label">Age:</label>
+<<<<<<< HEAD
                             <input name="age" class="form-control required" id="age" type="text" onkeyup="NumbersOnly(this)" required>
+=======
+                            <input name="age" class="form-control required" value="18" type="text"
+                                onkeyup="NumbersOnly(this)" required>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                             <div class="invalid-feedback">Please enter your age</div>
                         </div>
                         <div class="col-md-8">
                             <label class="form-label">Birthdate:</label>
+<<<<<<< HEAD
                             <input name="bd" type="date" value="1997-07-13" id="db" class="form-control required"
+=======
+                            <input name="bd" type="date" value="1997-07-13" class="form-control required"
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                                 required>
                             <div class="invalid-feedback">Please select your birthdate</div>
                         </div>
                         <div class="col-md-4">
                             <label class="form-label">Gender:</label>
+<<<<<<< HEAD
                             <select name="gender" id="gender" class="form-control">
+=======
+                            <select name="gender" class="form-control">
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                                 <option value="1">Male</option>
                                 <option value="0">Female</option>
                             </select>
                         </div>
                         <div class="col-md-8">
                             <label class="form-label">Civil Status:</label>
+<<<<<<< HEAD
                             <select name="status" id="status" class="form-control">
+=======
+                            <select name="status" class="form-control">
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                                 <option value="Single">Single</option>
                                 <option value="Married">Married</option>
                                 <option value="Widowed">Widowed</option>
@@ -101,7 +164,12 @@
                         <div class="col-md-4">
                             <label class="form-label">Citizenship:</label>
                             <div class="col-sm-12 p-0">
+<<<<<<< HEAD
                                 <input name="citizenship" class="form-control required" type="text" required>
+=======
+                                <input name="citizenship" class="form-control required" value=""
+                                    type="text" required>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                                 <div class="invalid-feedback">Enter your citizenship</div>
                             </div>
                         </div>
@@ -128,7 +196,11 @@
                         <div class="col-md-12">
                             <label class="form-label">Place of Birth:</label>
                             <div class="col-sm-12 p-0">
+<<<<<<< HEAD
                                 <input name="place-add" id="place-add" class="form-control required"
+=======
+                                <input name="place-add" class="form-control required"
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                                     type="text" required>
                                 <div class="invalid-feedback">Enter your birth address</div>
                             </div>
@@ -185,6 +257,7 @@
                         </div>
                         <div class="col-md-6">
                             <label class="form-label">Ethnic Origin:</label>
+<<<<<<< HEAD
                             <select name="ethnic" id="ethnic" class="form-control">
                                 <option value="Abaknon">Abaknon</option>
                                 <option value="Agta">Agta</option>
@@ -307,11 +380,29 @@
                             <input class="form-control" name="language" id="language" type="text">
                         </div>
                         <input type="text" hidden name="studtype" id="studtype">
+=======
+                            <input class="form-control" name="ethnic" type="text">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Religion:</label>
+                            <input class="form-control" name="religion" type="text">
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">Languages/Dialects Fluent In:</label>
+                            <input class="form-control" name="language" type="text">
+                        </div>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                         <div class="col-md-12">
                             <label class="form-label">Contact Information:</label>
                             <div class="row g2">
                                 <div class="col-sm-4">
+<<<<<<< HEAD
                                     <input class="form-control required" type="text" id="phone" name="contact" placeholder="Cellular Phone No." onkeyup="NumbersOnly(this)" required>
+=======
+                                    <input class="form-control required" type="text" name="contact"
+                                        placeholder="Cellular Phone No." onkeyup="NumbersOnly(this)"
+                                        required>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                                     <div class="invalid-feedback">Please provide this contact information
                                     </div>
                                 </div>
@@ -322,7 +413,12 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-4">
+<<<<<<< HEAD
                                     <input class="form-control" type="text" name="fbacc" id="fbacc" placeholder="Facebook Account">
+=======
+                                    <input class="form-control" type="text" name="fbacc"
+                                        placeholder="Facebook Account">
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                                 </div>
                             </div>
                         </div>
@@ -331,15 +427,28 @@
                             <input class="form-control" id="whomwork" name="optr-no" type="text">
                         </div>
                         <div class="card-header col-12">
+<<<<<<< HEAD
                             <h1 style="text-align: center; margin-bottom: 20px 0 20px 0; font-family: CENTURY GOTHIC;">FAMILY BACKGROUND</h1>
+=======
+                            <h1 style="text-align: center; margin-bottom: 20px 0 20px 0; font-family: CENTURY GOTHIC;">
+                                FAMILY BACKGROUND</h1>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                         </div>
                         <div class="col-md-12">
                             <label class="form-label">(if married):</label>
                             <div class="input-group">
+<<<<<<< HEAD
                                 <input type="text" name="spousename" id="spouse" class="form-control"
                                     placeholder="Name of Spouse">
                                 <input type="text" class="form-control" placeholder="Occupation" name="spouseoccupation" id="occupation">
                                 <input type="text" name="marriedchildren" id="children" class="col-md-2 form-control"
+=======
+                                <input type="text" name="spousename" class="form-control"
+                                    placeholder="Name of Spouse">
+                                <input type="text" class="form-control" placeholder="Occupation"
+                                    name="spouseoccupation">
+                                <input type="text" name="marriedchildren" class="col-md-2 form-control"
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                                     onkeyup="NumbersOnly(this)" placeholder="No. of Children">
                             </div>
                                 <div class="invalid-feedback col-12">Please fill all the needed information</div>
@@ -347,6 +456,7 @@
                         <div class="col-md-12">
                             <label class="form-label">Father's Name:</label>
                             <div class="input-group">
+<<<<<<< HEAD
                                 <input type="text" name="fafname" id="fafname" class="form-control required"
                                  placeholder="Firstname" required>
                                 <input type="text" name="famname" id="famname" class="form-control"
@@ -355,6 +465,16 @@
                                  placeholder="Lastname" required>
                                 <div class="col-md-2 pr-0">
                                     <input type="text" name="fasuffix" id="fasuffix" class="form-control"
+=======
+                                <input type="text" name="fafname" class="form-control required"
+                                 placeholder="Firstname" required>
+                                <input type="text" name="famname" class="form-control"
+                                    placeholder="Middlename">
+                                <input type="text" name="falname" class="form-control required"
+                                 placeholder="Lastname" required>
+                                <div class="col-md-2 pr-0">
+                                    <input type="text" name="fasuffix" class="form-control"
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                                         placeholder="Suffix">
                                 </div>
                             </div>
@@ -393,6 +513,7 @@
                             </div>
                         </div>
                         <div class="col-md-12">
+<<<<<<< HEAD
                             <label class="form-label">Mother's Maiden Name (Pangalan sa imong mama sa pagka dalaga):</label>
                             <div class="input-group">
                                 <input type="text" name="mofname" id="mofname" class="form-control required"
@@ -407,6 +528,22 @@
                                 </div>
                             </div>
                             <div class="invalid-feedback col-12">Please fill all the needed information</div>
+=======
+                            <label class="form-label">Mother's Name:</label>
+                            <div class="input-group">
+                                <input type="text" name="mofname" class="form-control required"
+                                 placeholder="Firstname" required>
+                                <input type="text" name="momname" class="form-control"
+                                    placeholder="Middlename">
+                                <input type="text" name="molname" class="form-control required"
+                                 placeholder="Lastname" required>
+                                <div class="col-md-2 pr-0">
+                                    <input type="text" name="mosuffix" class="form-control"
+                                        placeholder="Suffix">
+                                </div>
+                                <div class="invalid-feedback">Please fill all the needed information</div>
+                            </div>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                         </div>
                         <div class="col-md-12">
                             <label class="form-label">Contact Information (Mother):</label>
@@ -467,7 +604,10 @@
                                             <input type="radio" class="form-check-input" name="optradio2"
                                                 value="Living Together"> Living Together
                                         </label>
+<<<<<<< HEAD
                                         <input type="hidden" name="103" value="589" class="parents_are">
+=======
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                                     </div>
                                     <div class="form-check">
                                         <label class="form-check-label">
@@ -475,7 +615,10 @@
                                                 value="Temporarily Separated">
                                             Temporarily Separated
                                         </label>
+<<<<<<< HEAD
                                         <input type="hidden" name="101" value="605" class="parents_are">
+=======
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -485,7 +628,10 @@
                                                 value="Permanently Separated">
                                             Permanently Separated
                                         </label>
+<<<<<<< HEAD
                                         <input type="hidden" name="220" value="589" class="parents_are">
+=======
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                                     </div>
                                     <div class=" form-check">
                                         <label class="form-check-label">
@@ -493,7 +639,10 @@
                                                 value="Father w/ another partner">
                                             Father w/ another partner
                                         </label>
+<<<<<<< HEAD
                                         <input type="hidden" name="257" value="605" class="parents_are">
+=======
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -503,7 +652,10 @@
                                                 value="Marriage Annulled">
                                             Marriage Annulled
                                         </label>
+<<<<<<< HEAD
                                         <input type="hidden" name="364" value="589" class="parents_are">
+=======
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                                     </div>
                                     <div class="form-check">
                                         <label class="form-check-label">
@@ -511,7 +663,10 @@
                                                 value="Mother w/ another partner">
                                             Mother w/ another partner
                                         </label>
+<<<<<<< HEAD
                                         <input type="hidden" name="401" value="605" class="parents_are">
+=======
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                                     </div>
                                 </div>
                             </div>
@@ -524,7 +679,11 @@
                         </div>
                         <div class="col-md-6">
                             <label class="form-label">Guardian(if not living with parents):</label>
+<<<<<<< HEAD
                             <input type="text" name="guardianliving" id="guardian" class="form-control">
+=======
+                            <input type="text" name="guardianliving" class="form-control" onkeyup="NumbersOnly(this)">
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                         </div>
                         <div class="col-md-12" style="margin-bottom: 50px;">
                             <div class="input-group">
@@ -547,15 +706,24 @@
                         <div class="col-md-12">
                             <label class="form-label">Elementary School:</label>
                             <div class="input-group">
+<<<<<<< HEAD
                                 <input name="elemschool" id="elemschool" type="text" class="form-control required"
+=======
+                                <input name="elemschool"  type="text" class="form-control required"
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                                  placeholder="Name Of School" required>
                                 <div class="col-md-4 pr-0">
                                     <input type="text" name="elemyear" id="elemyear" class="form-control required"
                                      placeholder="Year Graduated" required
                                         onkeyup="NumbersOnly(this)">
                                 </div>
+<<<<<<< HEAD
                             </div>
                                 <div class="invalid-feedback col-12">Please fill all the needed information</div>
+=======
+                                <div class="invalid-feedback">Please fill all the needed information</div>
+                            </div>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                         </div>
                         <div class="col-md-12">
                             <label class="form-label">Secondary School:</label>
@@ -563,6 +731,7 @@
                                 <input name="secschool" id="secschool" type="text" class="form-control required"
                                  placeholder="Name Of School" required>
                                 <div class="col-md-4">
+<<<<<<< HEAD
                                     <input type="text" name="strand" id="strand" placeholder="Strand"
                                         class="form-control">
                                 </div>
@@ -573,10 +742,23 @@
                                 </div>
                             </div>
                                 <div class="invalid-feedback col-12">Please fill all the needed information</div>
+=======
+                                    <input type="text" name="strand" placeholder="Strand"
+                                        class="form-control">
+                                </div>
+                                <div class="col-md-4 p-0">
+                                    <input type="text" name="secyear" class="form-control required"
+                                     placeholder="Year Graduated" required
+                                        onkeyup="NumbersOnly(this)">
+                                </div>
+                                <div class="invalid-feedback">Please fill all the needed information</div>
+                            </div>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                         </div>
                         <div class="col-md-12">
                             <label class="form-label">Vocational School:</label>
                             <div class="input-group">
+<<<<<<< HEAD
                                 <input type="text" class="form-control" id="vocschool" name="vocschool" placeholder="Name Of School">
                                 <div class="col-md-3">
                                     <input type="text" class="form-control" id="voccourse" name="voccourse" placeholder="Course">
@@ -595,12 +777,24 @@
                                 </div>
                                 <div class="col-md-2 p-0">
                                     <input type="text" class="form-control" name="lastattend" id="lastattend" placeholder="Last attended" onkeyup="NumbersOnly(this)">
+=======
+                                <input type="text" class="form-control" name="vocschool" placeholder="Name Of School">
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" name="voccourse" placeholder="Course">
+                                </div>
+                                <div class="col-md-2 p-0">
+                                    <input type="text" class="form-control" name="vocyear" placeholder="Year Graduated" onkeyup="NumbersOnly(this)">
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <label>Honors/Award received</label>
+<<<<<<< HEAD
                             <input type="text" name="honors" id="honors" class="form-control">
+=======
+                            <input type="text" name="honors" class="form-control">
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                         </div>
                         <div class="col-md-12" style="margin: 30px 0 10px 0; ">
                             <label class="form-label" style="margin-right: 30px">Are you enrolling as a scholar?</label>
@@ -619,7 +813,11 @@
                             </div>
                         </div>
                         
+<<<<<<< HEAD
                             <div hidden class="col-12">
+=======
+                            <div class="col-12">
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                                 <label class="form-label">What course are you enrolled?</label>
                                 <div class="row">
                                     <div class="col-8">
@@ -640,7 +838,10 @@
                                 <option value="Banaybanay Extension Campus">Banaybanay Extension Campus</option>
                                 <option value="Cateel Extension Campus">Cateel Extension Campus</option>
                                 <option value="San-Isidro Extension Campus">San-Isidro Extension Campus</option>
+<<<<<<< HEAD
                                 <option value="Baganga Classes Campus">Baganga Classes Campus</option>
+=======
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                             </select>
                             <label class="form-label">Please enter your desired program/course to
                                 enroll (Fill all 3 fields)</label>
@@ -648,9 +849,13 @@
                                 <div class="input-group">
                                     <span class="input-group-text" style="width: 100px;">1st Choice</span>
                                     <select name="firstcourse" class="form-control col-form-label">
+<<<<<<< HEAD
                                         @foreach($program as $prog)
                                         <option value="{{$prog->pid}}">{{$prog->description}}</option>
                                         @endforeach
+=======
+                                        <option value="0">sample</option>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                                     </select>
                                 </div>
                             </div>
@@ -658,9 +863,13 @@
                                 <div class="input-group">
                                     <span class="input-group-text" style="width: 100px;">2nd Choice</span>
                                     <select name="secondcourse" class="form-control col-form-label">
+<<<<<<< HEAD
                                         @foreach($program as $prog)
                                         <option value="{{$prog->pid}}">{{$prog->description}}</option>
                                         @endforeach
+=======
+                                        <option value="0">sample</option>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                                     </select>
                                 </div>
                             </div>
@@ -668,16 +877,24 @@
                                 <div class="input-group">
                                     <span class="input-group-text" style="width: 100px;">3rd Choice</span>
                                     <select name="thirdcourse" class="form-control col-form-label">
+<<<<<<< HEAD
                                         @foreach($program as $prog)
                                         <option value="{{$prog->pid}}">{{$prog->description}}</option>
                                         @endforeach
+=======
+                                        <option value="0">sample</option>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                                     </select>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <label>Why did you decide to take the course you are enrolling?</label>
+<<<<<<< HEAD
                             <input type="text" id="qcourse" name="qcourse" class="form-control required" required>
+=======
+                            <input type="text" name="qcourse" class="form-control required" required>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                         </div>
                         <div class="col-md-12">
                             <label class="form-label">Is it your own choice to enroll in
@@ -699,11 +916,19 @@
                         </div>
                         <div class="col-md-12">
                             <label>Why did you decide to enroll in DOrSU?</label>
+<<<<<<< HEAD
                             <input type="text" id="qenroll" name="qenroll" class="form-control required" required>
                         </div>
                         <div class="col-md-12">
                             <label>What is your plan or ambition in life?</label>
                             <input type="text" id="qambition" name="qambition" class="form-control required" required>
+=======
+                            <input type="text" name="qenroll" class="form-control required" required>
+                        </div>
+                        <div class="col-md-12">
+                            <label>What is your plan or ambition in life?</label>
+                            <input type="text" name="qambition" class="form-control required" required>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                         </div>
                         <div class="col-md-12">
                             <label>What are your Expectations on: </label>
@@ -784,6 +1009,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>Hobbies/Recreational Activities:</label>
+<<<<<<< HEAD
                                     <input type="text" name="hobbies" class="form-control required">
                                 </div>
                                 <div class="col-md-6">
@@ -797,6 +1023,25 @@
                                 <div class="col-md-6" style="margin-bottom: 20px;">
                                     <label>Special Interests:</label>
                                     <input type="text" name="interest" class="form-control required">
+=======
+                                    <input type="text" name="hobbies" class="form-control required"
+                                        required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Motto:</label>
+                                    <input type="text" name="motto" class="form-control required"
+                                        required>
+                                </div>
+                                <div class="col-md-6" style="margin-bottom: 20px;">
+                                    <label>Special Skills/Talents:</label>
+                                    <input type="text" name="talent" class="form-control required"
+                                        required>
+                                </div>
+                                <div class="col-md-6" style="margin-bottom: 20px;">
+                                    <label>Special Interests:</label>
+                                    <input type="text" name="interest" class="form-control required"
+                                        required>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                                 </div>
                             </div>
                         </div>
@@ -806,22 +1051,41 @@
                         </div>
                         <div class="col-12">
                             <label class="form-check-label pl-0">Are you a person with disability (PWD)?</label>
+<<<<<<< HEAD
                             <label style="margin-left: 30px"><input type="radio" class="form-check-input" onclick="disability(1)" value="yes" name="pwd"> Yes</label>
                             <label style="margin-left: 30px"><input type="radio" class="form-check-input" name="pwd" value="no" onclick="disability(0)" name="pwd"> No</label>
+=======
+                            <label style="margin-left: 30px"><input type="radio" class="form-check-input" onclick="disability(1)" name="pwd">Yes</label>
+                            <label style="margin-left: 30px"><input type="radio" class="form-check-input" name="pwd" value="no" onclick="disability(0)" name="pwd">No</label>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                             <label style="float:right">If yes, give details (type of disability): <input type="text" name="pwd" class="form-control" disabled id="pwd-text"></label>
                         </div>
                         <div class="col-12">
                             <label class="form-check-label pl-0">Are you a single parent?</label>
+<<<<<<< HEAD
                             <label style="margin-left: 30px"><input type="radio" class="form-check-input" onclick="parent(1)" value="yes" name="sparent"> Yes</label>
                             <label style="margin-left: 30px"><input type="radio" class="form-check-input" value="no" onclick="parent(0)" name="sparent"> No</label>
                             <label style="float:right">If yes, give details (number of children): <input type="text" name="singleparent" class="form-control" disabled id="parent-text"></label>
+=======
+                            <label style="margin-left: 30px"><input type="radio" class="form-check-input"
+                                    onclick="parent(1)" name="sparent">Yes</label>
+                            <label style="margin-left: 30px"><input type="radio" class="form-check-input" name="singleparent" value="no"
+                                    onclick="parent(0)" name="sparent">No</label>
+                            <label style="float:right">If yes, give details (number of children): <input type="text" name="singleparent" class="form-control" name="" disabled id="parent-text"></label>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                         </div>
                         <div class="col-12">
                             <label class="form-check-label pl-0">Are you a working-student?</label>
                             <label style="margin-left: 30px"><input type="radio" class="form-check-input" value="1"
+<<<<<<< HEAD
                                     onclick="employee(1)" name="wstudent"> Yes</label>
                             <label style="margin-left: 30px"><input type="radio" class="form-check-input" value="0"
                                     onclick="employee(0)" name="wstudent"> No</label>
+=======
+                                    onclick="employee(1)" name="wstudent">Yes</label>
+                            <label style="margin-left: 30px"><input type="radio" class="form-check-input" value="0"
+                                    onclick="employee(0)" name="wstudent">No</label>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                             <label style="float:right">If yes, give details (employer): <input type="text"
                                     class="form-control" name="detailemp" disabled id="emp-text"></label>
                         </div>
@@ -835,6 +1099,7 @@
                         <div class="col-md-3">
                             <div class="form-check">
                                 <label class="form-check-label">
+<<<<<<< HEAD
                                     <input type="checkbox" class="form-check-input selfassesment" name="selfassesment[]"
                                         value="tense/jittery"> tense/jittery
                                 </label>
@@ -874,11 +1139,47 @@
                                         value="trusting"> trusting
                                 </label>
                                 <input type="hidden" name="81" value="356" class="hdn_assesment">
+=======
+                                    <input type="checkbox" class="form-check-input" name="selfassesment[]"
+                                        value="tense/jittery"> tense/jittery
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="selfassesment[]"
+                                        value="confident"> confident
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="selfassesment[]"
+                                        value="submissive"> submissive
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="selfassesment[]"
+                                        value="independent"> independent
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="selfassesment[]"
+                                        value="sensitive"> sensitive
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="selfassesment[]"
+                                        value="trusting"> trusting
+                                </label>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                             </div>
                         </div>
                         <div class=" col-md-3">
                             <div class="form-check">
                                 <label class="form-check-label">
+<<<<<<< HEAD
                                     <input type="checkbox" class="form-check-input selfassesment" name="selfassesment[]"
                                         value="easily troubled"> easily troubled
                                 </label>
@@ -918,11 +1219,47 @@
                                         value="insecure"> insecure
                                 </label>
                                 <input type="hidden" name="194" value="329" class="hdn_assesment">
+=======
+                                    <input type="checkbox" class="form-check-input" name="selfassesment[]"
+                                        value="easily troubled"> easily troubled
+                                </label>
+                            </div>
+                            <div class=" form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="selfassesment[]"
+                                        value="responsible"> responsible
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="selfassesment[]"
+                                        value="relaxed/calm"> relaxed/calm
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="selfassesment[]"
+                                        value="dependent"> dependent
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="selfassesment[]"
+                                        value="perceptive"> perceptive
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="selfassesment[]"
+                                        value="insecure"> insecure
+                                </label>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-check">
                                 <label class="form-check-label">
+<<<<<<< HEAD
                                     <input type="checkbox" class="form-check-input selfassesment" name="selfassesment[]"
                                         value="happy-go-lucky"> happy-go-lucky
                                 </label>
@@ -962,11 +1299,47 @@
                                         value="worrier"> worrier
                                 </label>
                                 <input type="hidden" name="311" value="329" class="hdn_assesment">
+=======
+                                    <input type="checkbox" class="form-check-input" name="selfassesment[]"
+                                        value="happy-go-lucky"> happy-go-lucky
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="selfassesment[]" value="loner">
+                                    loner
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="selfassesment[]"
+                                        value="suspicious"> suspicious
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="selfassesment[]"
+                                        value="stubborn"> stubborn
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="selfassesment[]"
+                                        value="idealistic"> idealistic
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="selfassesment[]"
+                                        value="worrier"> worrier
+                                </label>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-check">
                                 <label class="form-check-label">
+<<<<<<< HEAD
                                     <input type="checkbox" class="form-check-input selfassesment" name="selfassesment[]"
                                         value="friendly"> friendly
                                 </label>
@@ -999,14 +1372,49 @@
                                         value="practical"> practical
                                 </label>
                                 <input type="hidden" name="437" value="315" class="hdn_assesment">
+=======
+                                    <input type="checkbox" class="form-check-input" name="selfassesment[]"
+                                        value="friendly"> friendly
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="selfassesment[]"
+                                        value="imaginative"> imaginative
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="selfassesment[]"
+                                        value="dominant"> dominant
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="selfassesment[]"
+                                        value="sentimental"> sentimental
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="selfassesment[]"
+                                        value="practical"> practical
+                                </label>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                             </div>
                             <input type="text" hidden name="selfasses" id="selfasses">
                             <div class="form-check">
                                 <label class="form-check-label">
+<<<<<<< HEAD
                                     <input type="checkbox" class="form-check-input selfassesment" id="otherpossesed"
                                         onchange="OthersPossesed()"> Others:
                                 </label>
                                 <input type="hidden" name="437" value="329" class="hdn_assesment">
+=======
+                                    <input type="checkbox" class="form-check-input" id="otherpossesed"
+                                        onchange="OthersPossesed()"> Others:
+                                </label>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                             </div>
                             <input style="float: left;" type="text" class="form-control" id="otherposstext" disabled>
                         </div>
@@ -1016,6 +1424,7 @@
                         <div class="col-md-6">
                             <div class="form-check">
                                 <label class="form-check-label">
+<<<<<<< HEAD
                                     <input type="checkbox" value="Financial difficulty" class="form-check-input bother" name="bothers[]"> Financial difficulty
                                 </label>
                                 <input type="hidden" name="81" value="356" class="hdn_bother">
@@ -1041,10 +1450,34 @@
                             </div>
                                 <input type="hidden" name="293" value="356" class="hdn_bother">
                             <input style="float: left;" type="text" name="bothers[]" class="form-control" id="health-text" disabled>
+=======
+                                    <input type="checkbox" class="form-check-input" name="bothers[]"> Financial difficulty
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="bothers[]"> Difficulties in
+                                    adjusting a new school
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="bothers[]"> Study habits
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="bothers[]" id="healthprob"
+                                        onchange="HealthOther()"> Health problems, Please specify:
+                                </label>
+                            </div>
+                            <input style="float: left;" type="text" class="form-control" id="health-text" disabled>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                         </div>
                         <div class="col-md-6">
                             <div class="form-check">
                                 <label class="form-check-label">
+<<<<<<< HEAD
                                     <input type="checkbox" class="form-check-input bother" value="Developing self-confidence" name="bothers[]">
                                     Developing self-confidence
                                 </label>
@@ -1073,6 +1506,32 @@
                             </div>
                             <input type="text" hidden name="bother" id="bother">
                             <input style="float: left;" type="text" class="form-control" name="bothers[]" id="specify-text" disabled>
+=======
+                                    <input type="checkbox" class="form-check-input" name="bothers[]">
+                                    Developing self-confidence
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="bothers[]">
+                                    Interpersonal relationship (parent;friends;siblings)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="bothers[]">
+                                    Student-Instructor relationship
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="bothers[]" id="otherspecify"
+                                        onchange="SpecifyOther()"> Other, please specify:
+                                </label>
+                            </div>
+                            <input type="text" hidden name="bother" id="bother">
+                            <input style="float: left;" type="text" class="form-control" id="specify-text" disabled>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                         </div>
                         <div class="col-md-12">
                             <label>What was your most embarrassing experience in life?</label>
@@ -1101,7 +1560,11 @@
                         </div>
                         <div class="col-md-6">
                             <div class="input-group">
+<<<<<<< HEAD
                                 <span class="input-group-text" style="width: 100px;">Counselors</span>
+=======
+                                <span class="input-group-text" style="width: 100px;">Councelors</span>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                                 <input type="text" name="councelors" class="form-control">
                             </div>
                         </div>

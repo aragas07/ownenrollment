@@ -43,7 +43,11 @@
                         <span class="no-icon">{{ Auth::user()->name }}</span>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+<<<<<<< HEAD
                         <a class="dropdown-item" href=" "><span class="no-icon">{{ __('Account') }}</span></a>
+=======
+                        <a class="dropdown-item" href=" {{route('profile.edit') }} "><span class="no-icon">{{ __('Account') }}</span></a>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                     </div>
                 </li>

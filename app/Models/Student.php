@@ -12,5 +12,9 @@ class Student extends Model
     protected $table = 'students';
 
     protected $primaryKey = 'id';
+<<<<<<< HEAD
     protected $keyType = 'string';
+=======
+
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
 }

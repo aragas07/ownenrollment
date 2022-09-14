@@ -31,7 +31,11 @@
             Act 10173 or the Data Privacy of 2012.
         </p>
         <div class="text-center">
+<<<<<<< HEAD
             <button style="width: 100px" class="btn btn-primary fadeIn second m-auto btn-proceed">Ok</button>
+=======
+            <button style="width: 100px" class="btn btn-primary fadeIn second m-auto">Ok</button>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
         </div>
     </div>
 </div>

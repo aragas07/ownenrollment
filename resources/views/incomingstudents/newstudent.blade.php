@@ -422,6 +422,10 @@
                                     <option value="Banaybanay Extension Campus">Banaybanay Extension Campus</option>
                                     <option value="Cateel Extension Campus">Cateel Extension Campus</option>
                                     <option value="San-Isidro Extension Campus">San-Isidro Extension Campus</option>
+<<<<<<< HEAD
+=======
+                                    <option value="Baganga Classes">San-Isidro Extension Campus</option>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                                 </select>
                             </div>
                             <label class="form-label">Please enter your desired program/course to

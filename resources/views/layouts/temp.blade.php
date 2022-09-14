@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,11 +12,18 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{asset('light-bootstrap/css/loginstyle.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+<<<<<<< HEAD
     <link href="{{ asset('light-bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
     <script src="{{asset('light-bootstrap/js/core/jquery.3.2.1.min.js')}}"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
+=======
+    <link href="{{ asset('light-bootstrap/css/bootstrap.min.css') }}" rel="stylesheet"/>
+    <script src="{{asset('light-bootstrap/js/core/jquery.3.2.1.min.js')}}"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
 <body>
     <div class="cont-head">
         <div class="header row">
@@ -28,17 +38,24 @@
                 <i class="fa fa-magnifying-glass m-search"></i>
                 <i class="fa fa-magnifying-glass search"></i>
                 @else
+<<<<<<< HEAD
                 <a id="navbarDropdown" class="nav-link text-light dropdown-toggle" href="#" role="button"
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                     v-pre>{{ Auth::user()->name}}</a>
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+=======
+                <a id="navbarDropdown" class="nav-link text-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>{{ Auth::user()->name}}</a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">@csrf</form>
                 </div>
                 @endguest
             </div>
         </div>
 
+<<<<<<< HEAD
         @guest
         @yield('content')
         @else
@@ -70,4 +87,36 @@
     </script>
 </body>
 
+=======
+    @guest
+        @yield('content')
+    @else
+        <div class="cont justify">
+            @yield('content')
+        </div>
+        </div>
+    @endif
+    <script>
+        $(function() {
+            var b = true;
+            $("#navbarDropdown").click(function() {
+                if (b) {
+                    $(".dropdown-menu").css("display", "block");
+                    b = false;
+                } else {
+                    $(".dropdown-menu").css("display", "none");
+                    b = true;
+                }
+
+            })
+            $(window).click(function(event) {
+                if (!event.target.matches("a")) {
+                    b = true;
+                    $(".dropdown-menu").css("display", "none");
+                }
+            })
+        })
+        </script>
+</body>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
 </html>

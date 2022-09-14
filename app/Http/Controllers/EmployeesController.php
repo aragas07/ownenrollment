@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Employee;
 use Illuminate\Http\Request;
+<<<<<<< HEAD
+=======
+use Yajra\DataTables\Facades\DataTables;
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
 
 class EmployeesController extends Controller
 {
@@ -14,12 +18,45 @@ class EmployeesController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         $employees = Employee::join('users', 'users.id', '=', 'employees.users_id')
             ->get();
         
         return view('employees.index', [
             'employees' => $employees
         ]);
+=======
+        return view('employees.index');
+    }
+
+    public function getEmployees(){
+        $employees = Employee::join('designation_employees', 'employees.oid', '=', 'designation_employees.employees_id')
+            ->join('users', 'users.id', '=', 'employees.users_id')
+            ->get(['*', 'employees.id as employeeid']);
+
+        if(request()->ajax()) {
+            return DataTables::of($employees)
+            ->addColumn('action', function($row){
+                return
+            '<a class="btn btn-primary btn-sm mx-1" 
+                id="viewStudent"
+                href="javascript:void(0)" 
+                role="button"
+                data-url="' . route('viewStudent', $row->id) . '">View</a> 
+            <a  class="btn btn-primary btn-sm mx-1" 
+                id="checkRequirements" 
+                href="javascript:void(0)" 
+                role="button" 
+                data-url="' . route('checkRequirements', $row->id) . '">Accept</a>';
+            }
+            )
+            ->rawColumns(['action'])
+            ->addIndexColumn()
+            ->make(true);
+        }
+        
+        return response()->json($employees);
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
     }
 
     /**

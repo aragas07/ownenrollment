@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @extends('layouts.app')
 
 @section('content')
@@ -6,6 +7,16 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card strpied-tabled-with-hover">
+=======
+@extends('layouts.app', ['activePage' => 'students', 'title' => 'Students List - DOrSU', 'navName' => 'Students', 'activeButton' => 'laravel'])
+
+@section('content')
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card striped-tabled-with-hover">
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                         <div class="card-header ">
                             <h4 class="card-title">Incoming Student Profile</h4>
                             <p class="card-category">{{ __('Editable through if else') }}</p>
@@ -276,5 +287,9 @@
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
     </div> -->
+=======
+    </div>
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
 @endsection

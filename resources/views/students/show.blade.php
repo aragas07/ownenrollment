@@ -27,6 +27,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
+<<<<<<< HEAD
                                     <div class="col-md-4 form-group py-0">
                                         <label for="name">First Name</label>
                                         <input type="email" class="form-control" id="name" aria-describedby="emailHelp" value="{{ $student->first_name }}" disabled>
@@ -41,6 +42,8 @@
                                     </div>
                                 </div>
                                 <div class="row">
+=======
+>>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                                     <div class="col-md-12">
                                         <button type="submit" class="btn btn-primary">Submit</button>   
                                     </div>
