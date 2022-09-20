@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Photos;
 use App\Models\App;
-<<<<<<< HEAD
 use App\Models\Program;
 use App\Models\User;
 use Validator;
@@ -16,38 +15,16 @@ class IncomingStudentsController extends Controller{
     public function index(){
         $programs = DB::table('program')->join('department','program.department_id','=','department.id')->
         where('department.id', '!=', 5)->select('*','program.id as pid')->get();
-        return view('incomingstudents/stepbystep')->with('program',$programs);
+        return view('incomingstudents.stepbystep')->with('program',$programs);
     }
 
     public function StopNum(Request $req){
     session(['key'=>$req->key,'studenttype'=>$req->type]);
-=======
-use Validator;
-
-class IncomingStudentsController extends Controller{
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    
-    public function index()
-    {
-        return view('incomingstudents/create');
-    }
-
-    public function StopNum($id,$type){
-        session(['key'=>$id,'studenttype'=>$type]);
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
         return response()->json(['number'=>session('key'), 'type'=>session('studenttype')]);
     }
 
     public function GetNum(){
-<<<<<<< HEAD
         return response()->json(['number'=>session('key'), 'type'=>session('studenttype'), 'transaction' => session('tracking')]);
-=======
-        return response()->json(['number'=>session('key'), 'type'=>session('studenttype')]);
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
     }
     
     public function create()
@@ -59,14 +36,11 @@ class IncomingStudentsController extends Controller{
         return view('studentform')->with(['type'=>$id]);
     }
     
-<<<<<<< HEAD
     public function accept(){
         session(['loged'=>true]);
         return response(true);
     }
     
-=======
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
     public function store(Request $request)
     {
         $newStud = new IncomingStudent();
@@ -102,15 +76,11 @@ class IncomingStudentsController extends Controller{
         if($request['mosuffix'] !== null){
             $mothersname .= ' '.$request['mosuffix'].'.';
         }
-<<<<<<< HEAD
         if($request['studtype'] === 'new'){
             $newStud->is_new = 1;
         }else if($request['studtype'] === 'transferee'){
             $newStud->is_transferee = 1;
         }
-=======
-
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
         $newStud->fathers_name = $fathersname;
         $newStud->fathers_contact_number = $request['facontact'];
         $newStud->fathers_address = $request['faaddress'];
@@ -165,7 +135,6 @@ class IncomingStudentsController extends Controller{
         $newStud->motto = $request['moto'];
         $newStud->talent = $request['talent'];
         $newStud->interest = $request['interest'];
-<<<<<<< HEAD
         $newStud->lrn = $request['lrn'];
         $selfassesment = '';
         for($i = 0; $i < count($request->selfassesment) ;$i++){
@@ -239,31 +208,11 @@ class IncomingStudentsController extends Controller{
     }
 
 
-=======
-
-        $newStud->fathers_employment = $request['faemployment'];
-        $newStud->fathers_contact_number = $request['facontact'];
-        $newStud->selfassesment = $request['selfassesment'];
-        $newStud->bothers = $request['bothers'];
-        $who = 'Friends: '.$request['friends'].', Parents: '.$request['parents'].', Teacher: '.$request['teacher'].', Councilors: '.$request['counselors'];
-        $newStud->would_you_like_to_talk = $who;
-    
-        $file = time().'.'.$request->image->extension();
-        $path = public_path().'/studentfile/'.$request['fname'].' '.$request['mname'].' '.$request['lname'];
-        $newStud->profile = $file;
-        $newStud->save();
-        mkdir($path);
-        $request->image->move($path, $file);
-        return response()->json(['sample'=>$request['fname']]);
-    }
-
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
     public function showView(){
         $photo = Photos::All();
         return view('incomingstudents.sample')->with('photo',$photo);
     }
 
-<<<<<<< HEAD
     public function searchticket(Request $req){
         $student = DB::table('incoming_students')->where('transaction_number',$req->search)->first();
         return response()->json($student);
@@ -272,12 +221,6 @@ class IncomingStudentsController extends Controller{
     public function show($id)
     {
         $incoming_student = IncomingStudent::find($id);
-=======
-    public function show($id)
-    {
-        $incoming_student = IncomingStudent::find($id);
-        
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
         return view('incomingstudents.show')->with('incoming_student', $incoming_student);
     }
 

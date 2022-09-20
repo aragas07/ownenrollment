@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
 namespace App\Http\Controllers;
 use App\Models\IncomingStudent;
 use App\Models\Student;
@@ -9,20 +8,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
-use Validator;
-=======
-
-namespace App\Http\Controllers;
-
-use App\Models\IncomingStudent;
-use App\Models\Student;
-use App\Models\User;
-use Carbon\Carbon;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 use Yajra\DataTables\Facades\DataTables;
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
+use Carbon\Carbon;
+use Validator;
 
 class StudentsController extends Controller
 {
@@ -32,7 +20,6 @@ class StudentsController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-<<<<<<< HEAD
     public function grade(){
         $sid = Auth::user()->username;
         $grades = DB::select("SELECT * FROM `studentgrade` where username='$sid' and sy = (select sy from studentgrade where username='$sid' order by sy desc limit 1) and 
@@ -101,25 +88,6 @@ class StudentsController extends Controller
     }
 
     public function index()
-    {
-        //$incoming_students = IncomingStudent::all();
-
-        $incoming_students = DB::table('incoming_students')
-        ->select('*')
-        ->paginate(5);
-
-        // $students = DB::table('students')
-        // ->select('students.oid as id', 'school_id', 'first_name', 'middle_name', 'last_name', 'courses.acronyms as acronyms', 'student_status', 'application_status')
-        // ->join('courses as courses', 'incoming_students.course_first_choice', '=', 'courses.id', 'left')
-        // ->orderBy('id', 'DESC')
-        // ->paginate(5);
-        return view('students.index', [
-            'incoming_students' => $incoming_students,'students' => $incoming_students
-        ]);
-    }
-
-=======
-    public function index()
     { 
         //$incoming_students = IncomingStudent::all();
 
@@ -167,7 +135,6 @@ class StudentsController extends Controller
     }
 
     public function ajaxIndex(){
-
         $user = Auth::id();
         $employee = DB::table('users')
                         ->join('employees', 'users.id', '=', 'employees.users_id')
@@ -271,7 +238,7 @@ class StudentsController extends Controller
 
         return view('students.requirements')->with('student', $student);
     }
-
+    
     public function checkRequirements($id)
     {
         $student = DB::table('incoming_students')
@@ -281,6 +248,8 @@ class StudentsController extends Controller
 
         return response()->json($student);
     }
+
+    
 
     public function forAdvising($id)
     {
@@ -438,8 +407,6 @@ class StudentsController extends Controller
 
         return redirect('students/assign');
     }
-
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
     /**
      * Show the form for creating a new resource.
      *
@@ -474,8 +441,6 @@ class StudentsController extends Controller
         return view('students.show')->with('student', $student);
     }
 
-<<<<<<< HEAD
-=======
     public function viewStudent($id)
     {
         $student = IncomingStudent::find($id);
@@ -491,7 +456,6 @@ class StudentsController extends Controller
         return response()->json($programs);
     }
 
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
     /**
      * Show the form for editing the specified resource.
      *
@@ -503,6 +467,12 @@ class StudentsController extends Controller
         //
     }
 
+    public function info(){
+        $programs = DB::table('program')->join('department','program.department_id','=','department.id')->
+        where('department.id', '!=', 5)->select('*','program.id as pid')->get();
+        return view('incomingstudents.admissionform')->with('program',$programs);
+    }
+
     /**
      * Update the specified resource in storage.
      *
@@ -512,12 +482,8 @@ class StudentsController extends Controller
      */
     public function update(Request $request, $id)
     {
-<<<<<<< HEAD
-        //
-=======
         IncomingStudent::where('id', $id)
             ->update(['school_id'=>$request->input('school_id')]);
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
     }
 
     /**
@@ -528,12 +494,6 @@ class StudentsController extends Controller
      */
     public function destroy($id)
     {
-<<<<<<< HEAD
-        //
-    }
-}
-=======
         
     }
 }
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b

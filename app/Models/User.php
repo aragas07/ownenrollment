@@ -6,11 +6,8 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-<<<<<<< HEAD
-=======
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
 
 class User extends Authenticatable
 {
@@ -47,28 +44,25 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-<<<<<<< HEAD
     public function userStudent(){
         return $this->belongsToMany('App/Models/Student','users_id','id');
     }
-=======
     public function whatIs(){
         $user = Auth::id();
 
         $employee = DB::table('users')
                         ->join('employees', 'users.id', '=', 'employees.users_id')
-                        ->select('employees.oid')
+                        ->select('employees.id')
                         ->where('users.id', '=', $user)
                         ->get();
 
         $employeeData = json_decode( json_encode($employee), true);
 
         $designation = DB::table('designation_employees')
-                        ->where('designation_employees.employees_id', '=', $employeeData[0]['oid'])
+                        ->where('designation_employees.employees_id', '=', $employeeData[0]['id'])
                         ->select('designation_employees.designation_role', 'designation_employees.program_id')
                         ->get();
 
         return $designation;
     }  
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
 }

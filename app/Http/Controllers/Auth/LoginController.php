@@ -6,10 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-<<<<<<< HEAD
 use Illuminate\Support\Facades\Auth;
-=======
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
@@ -44,10 +41,6 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
     public function login(Request $request){
         $this->validateLogin($request);
         if (method_exists($this, 'hasTooManyLoginAttempts') &&
@@ -86,8 +79,4 @@ class LoginController extends Controller
             ? new JsonResponse([], 204)
             : redirect('/');
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b

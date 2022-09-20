@@ -1,7 +1,6 @@
 @extends('layouts/temp', ['activePage' => 'login', 'title' => 'DOrSU'])
 @section('content')
 <div class="cont">
-<<<<<<< HEAD
     <!-- <img src="{{asset('light-bootstrap/img/sideimage.png')}}" class="cont-img"> -->
         <div class="login w-30per justify">
             <div class="cont-login col-md-11">
@@ -53,45 +52,6 @@
                 </li>
             </ul>
         </div>
-=======
-    <img src="{{asset('light-bootstrap/img/sideimage.png')}}" class="cont-img">
-    <div class="login w-30per justify">
-        <div class="cont-login col-md-11">
-            <form class="form" id="myform" method="POST">
-                @csrf
-                <p class="text-mobile size">Welcome, Tatenian</p>
-                <div class="form-group row">
-                    <i class="fa fa-envelope left-icon"></i>
-                    <input type="text" placeholder="Username"
-                        class="col inp inp-text @error('username') is-invalid @enderror" name="username"
-                        value="{{ old('username') }}" required autocomplete="username" autofocus>
-                    @error('username')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
-                </div>
-                <div class="form-group row">
-                    <i class="fa fa-lock left-icon"></i>
-                    <input type="password" placeholder="password"
-                        class="col inp inp-text @error('password') is-invalid @enderror" name="password"
-                        value="{{ old('password') }}" required autocomplete="current-password">
-                    @error('password')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
-                </div>
-                <div class="row justify-content-between">
-                    <button type="submit" class="btn-log">Log in</button>
-                    @if (Route::has('password.request'))
-                    <a class="btn btn-link" href="{{ route('password.request') }}">{{ __('Forgot Your Password?') }}</a>
-                    @endif
-                </div>
-            </form>
-        </div>
-    </div>
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
     <svg height="100%" width="width" xmlns="http://www.w3.org/2000/svg">
         <ellipse id="svgelem" cx="7" cy="0" rx="35%" ry="100%" stroke-width="4" fill="blue" />
     </svg>
@@ -182,15 +142,9 @@ $(function() {
                 password: password
             },
             success: function(data) {
-<<<<<<< HEAD
 
                 if (data.success) {
                     location.href = "choose"
-=======
-                
-                if (data.success) {
-                    location.href = "{{ route('choose')}}"
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
                 } else {
                     swal({
                         text: data.error,

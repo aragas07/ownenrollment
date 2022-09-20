@@ -27,12 +27,9 @@ body,html{
     margin: 10px auto;
 }
 
-<<<<<<< HEAD
-=======
 .body{
     text-align: center;
 }
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
 
 .btn-link{
     font-weight: 700!important;
@@ -101,11 +98,7 @@ body,html{
     display: none!important;
 }
 
-<<<<<<< HEAD
 .cont-vission{
-=======
-.cont-img{
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
     position: absolute;
     margin-top: 1px;
     right: 0;
@@ -157,17 +150,7 @@ body,html{
     flex: 1 1 auto;
     justify-content: center;
     align-items: center;
-<<<<<<< HEAD
-    width: 100;
 }
-
-.body{
-    text-align: center;
-}
-
-=======
-}
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
 .header{
     background-color: blue;
     position: absolute;
@@ -181,12 +164,6 @@ body,html{
     margin-left: 10px;
 }
 
-<<<<<<< HEAD
-=======
-.body{
-    width: 100%;
-}
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
 
 #svgelem{
     display: block;
@@ -207,13 +184,10 @@ body,html{
 }
 
 @media screen and (max-width: 670px){
-<<<<<<< HEAD
     
     .cont-head{
         display: inline-block;
     }
-=======
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
     #logo-desc{
         display: none;
     }
@@ -232,22 +206,15 @@ body,html{
         display: none;
     }
 
-<<<<<<< HEAD
     .cont-vission{
         position: inherit;
         display: inline;
-=======
-    .cont-img{
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
         width: 100%;
         height: 93%!important;
     }
 
     .login{
-<<<<<<< HEAD
         position: inherit;
-=======
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
         margin: auto;
         display: block;
         height: 80%;
@@ -276,14 +243,11 @@ body,html{
 
     .cont-login{
         width: 70%!important;
-<<<<<<< HEAD
         margin: 70px 0 70px 0;
         padding: 30px!important;
         border-radius: 4px;
         box-shadow: 1px 0 4px 0;
         /* border: 1px solid #8c8a8a; */
-=======
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
     }
     .justify{
         display: flex;
@@ -329,7 +293,6 @@ body,html{
         padding: 5px;
     }
 
-<<<<<<< HEAD
     ul>li>h4{
         padding-right: 25px;
         font-size: 18px;
@@ -337,6 +300,4 @@ body,html{
     .cont-vission>h4{
         font-size: 18px;
     }
-=======
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
 }

@@ -4,10 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Employee;
 use Illuminate\Http\Request;
-<<<<<<< HEAD
-=======
 use Yajra\DataTables\Facades\DataTables;
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
 
 class EmployeesController extends Controller
 {
@@ -18,14 +15,6 @@ class EmployeesController extends Controller
      */
     public function index()
     {
-<<<<<<< HEAD
-        $employees = Employee::join('users', 'users.id', '=', 'employees.users_id')
-            ->get();
-        
-        return view('employees.index', [
-            'employees' => $employees
-        ]);
-=======
         return view('employees.index');
     }
 
@@ -56,7 +45,6 @@ class EmployeesController extends Controller
         }
         
         return response()->json($employees);
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
     }
 
     /**

@@ -1,45 +1,32 @@
-<div hidden class="container-fluid hdn-div fadeInDown">
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('light-bootstrap/img/apple-icon.png') }}">
+        <link rel="icon" type="image/png" href="{{ asset('light-bootstrap/img/favicon.ico') }}">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>{{ __('Register') }}</title>
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+        <!--     Fonts and icons     -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+        <!-- CSS Files -->
+        <link href="{{ asset('light-bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
+        <link rel="stylesheet" href="{{ asset('css/enroll.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"/>
+        <script src="{{ asset('light-bootstrap/js/core/jquery.3.2.1.min.js') }}" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.943/pdf.min.js"></script>
+    </head>
+
+    <body>
+        <div class="wrapper wrapper-full-page">
+            <div class="container-fluid hdn-div fadeInDown">
     <div class="row justify-content-center">
         <div class="col-lg-10">
-            <div id="oldstud" hidden class="card shadow-lg border-0 rounded-lg mt-5 ml-auto mr-auto p-0 col-lg-5">
-                <div class="card-header">
-                    <h1 style="text-align: center; margin-top: 20px; margin-bottom: 20px; font-family: CENTURY GOTHIC;">
-                        BASIC INFORMATION</h1>
-                </div>
-                <div class="card-body">
-                    <form action="" id="s-Student" method="post">
-                        <div class="row m-0 form-group">
-                            <label class="col-4 p-0">ID Number</label>
-                            <p class="col-8">---------</p>
-                        </div>
-                        <div class="row m-0 form-group">
-                            <label class="col-4 p-0">First name</label>
-                            <input type="text" name="fname" class="col-8 form-control form-control-sm">
-                        </div>
-                        <div class="row m-0 form-group">
-                            <label class="col-4 p-0">Middle name</label>
-                            <input type="text" name="mname" class="col-8 form-control form-control-sm">
-                        </div>
-                        <div class="row m-0 form-group">
-                            <label class="col-4 p-0">Last name</label>
-                            <input type="text" name="mname" class="col-8 form-control form-control-sm">
-                        </div>
-                        <div class="row m-0 form-group">
-                            <label class="col-4 p-0">Date of Birth</label>
-                            <input type="text" name="birthdate" class="col-8 form-control form-control-sm">
-                        </div>
-                        <div class="row m-0 form-group">
-                            <label class="col-4 p-0">Phone #</label>
-                            <input type="text" class="col-8 form-control form-control-sm">
-                        </div>
-                        <div class="col-12">
-                            <button type="button" class="btn btn-success float-left">Checked</button>
-                            <button class="btn btn-primary float-right">Proceed</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div id="newstudform" hidden class="card shadow-lg border-0 rounded-lg mt-5">
+            <div id="newstudform" class="card shadow-lg border-0 rounded-lg mt-5">
                 <div class="card-header">
                     <h1 style="text-align: center; margin-top: 20px; margin-bottom: 20px; font-family: CENTURY GOTHIC;">STUDENT INFORMATION PROFILE</h1>
                 </div>
@@ -1114,3 +1101,7 @@
         </div>
     </div>
 </div>
+        </div>
+    </body>
+        <!--   Core JS Files   -->
+</html>

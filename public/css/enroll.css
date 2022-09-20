@@ -1,14 +1,10 @@
 body{
   background-color: #d6e6ff;
 }
-<<<<<<< HEAD
-
 .justify-content-between {
   display: flex;
 }
 
-=======
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
 .container, .wrapper{
   width: 100%;
   -ms-flex-align: center;
@@ -19,7 +15,6 @@ body{
   padding: 0 30px;
   overflow: auto;
 }
-<<<<<<< HEAD
 
 .div-img{
   display: flex;
@@ -129,8 +124,6 @@ body{
   position: absolute;
 }
 
-=======
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
 .container{height: 90vh;}
 .wrapper{height: 100vh;}
 footer{
@@ -231,11 +224,7 @@ footer{
 }
 
 .step-forms-active {
-<<<<<<< HEAD
   display: block;
-=======
-  display: block
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
 }
 
 .group-inputs {
@@ -484,7 +473,6 @@ h2.active {
   animation-delay: 0.6s;
 }
 
-<<<<<<< HEAD
 .loading-div{
   position: fixed;
   -ms-flex-align: center;
@@ -496,8 +484,6 @@ h2.active {
   width: 100vw;
 }
 
-=======
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
 .fadeIn.third {
   -webkit-animation-delay: 0.8s;
   -moz-animation-delay: 0.8s;
@@ -576,10 +562,7 @@ font-family: CENTURY GOTHIC;
   text-align: center;
   padding: 0 9px;
   height: 38px;
-<<<<<<< HEAD
-=======
   min-width: 110px;
->>>>>>> 4902ee9d50166865fed8abff13e702c06e03287b
   background-color: rgba(0,0,0,.03);
   border-radius: 4px 0 0 4px;
   margin-right: -1px;
